@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
     <style>
         body {
+
             /* Sets the image file path or URL */
             background-image: url("imgs/Jack.gif"); 
             
@@ -25,8 +26,9 @@
     </style>
 </head>
 <body>
-        <audio loop autoplay>
-            <source src="imgs/bg_music.mp3" type="audio/mpeg">
+        <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+        <audio id="player" autoplay loop>
+            <source src="imgs/bg_music.mp3" type="audio/mp3">
         </audio>
 
         <div class="box">
