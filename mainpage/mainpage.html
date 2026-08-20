@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container" style="display: none;">
+        <img src="https://files.catbox.moe/t91seo.gif" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        
+    </div>
+
+    <script>
+    // Fine you want in so bad? Here...
+    let password = "testpassword2498";
+        
+        (function passcodeprotect() {
+            let passcode = prompt("Enter Password to Access Protected Content:");
+            
+            while (passcode !== password) {
+                if (passcode === null) {
+                    // User clicked Cancel
+                    alert("Access denied. Page will not load.");
+                    return;
+                }
+                alert("Incorrect Password!");
+                passcode = prompt("Enter Password to Access Protected Content:");
+            }
+            
+            alert("Access Granted!");
+            document.getElementById("container").style.display = "block";
+        })();
+        </script>
+</body>
+</html>

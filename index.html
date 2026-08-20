@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turtleduck Studios</title>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+message = "Still Building 🚧 ";
+function step() {
+message = message.substr(1) + message.substr(0,1);
+document.title = message.substr(0,15);
+}
+</script>
     <style>
         body {
 
@@ -25,8 +32,7 @@
         }
     </style>
 </head>
-<body>
-        <iframe src="imgs/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+<body onload="setInterval(step,100)">
         <audio id="player" autoplay loop>
             <source src="imgs/bg_music.mp3" type="audio/mp3">
         </audio>
@@ -34,6 +40,7 @@
         <div class="box">
         <p>The <b>turtleduckstudios.net</b> page is currently under construction. Please check back again later.</p>
         <p>d-(^_^)z</p>
-        </div>    
+        </div>
+        <button class="button-1" role="button" onclick="document.location='mainpage/mainpage.html'">Enter Page</button>
 </body>
 </html>
